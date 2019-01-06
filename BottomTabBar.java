@@ -1,5 +1,6 @@
 package com.example.abdallaheltahawi.namaaapp;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -9,11 +10,12 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 public class BottomTabBar extends AppCompatActivity {
-
+    public static Context context ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_tab_bar);
+        context=this;
         BottomNavigationView bottomNavigationView = (BottomNavigationView)findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener
                 (new BottomNavigationView.OnNavigationItemSelectedListener() {

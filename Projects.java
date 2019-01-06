@@ -91,7 +91,7 @@ public class Projects extends Fragment {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(BottomTabBar.context, error.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
         RequestQueue requestQueue = Volley.newRequestQueue(getContext());

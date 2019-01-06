@@ -73,7 +73,7 @@ public class Register extends Fragment implements View.OnClickListener{
                // progressDialog.dismiss();
                 try {
                     JSONObject jsonObject=new JSONObject(response);
-                    Toast.makeText(getContext(),jsonObject.getString("message"),Toast.LENGTH_LONG).show();
+                    Toast.makeText(BottomTabBar.context,jsonObject.getString("message"),Toast.LENGTH_LONG).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -83,7 +83,7 @@ public class Register extends Fragment implements View.OnClickListener{
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         progressDialog.hide();
-                        Toast.makeText(getContext(),error.getMessage(),Toast.LENGTH_LONG).show();
+                        Toast.makeText(BottomTabBar.context,error.getMessage(),Toast.LENGTH_LONG).show();
                     }
                 }){
 
@@ -135,7 +135,7 @@ public class Register extends Fragment implements View.OnClickListener{
 
                 try {
                     JSONObject jsonObject=new JSONObject(response);
-                    Toast.makeText(getContext(),jsonObject.getString("message"),Toast.LENGTH_LONG).show();
+                    Toast.makeText(BottomTabBar.context,jsonObject.getString("message"),Toast.LENGTH_LONG).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -145,7 +145,7 @@ public class Register extends Fragment implements View.OnClickListener{
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         progressDialog.hide();
-                        Toast.makeText(getContext(),error.getMessage(),Toast.LENGTH_LONG).show();
+                        Toast.makeText(BottomTabBar.context,error.getMessage(),Toast.LENGTH_LONG).show();
                     }
                 }){
             @Override

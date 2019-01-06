@@ -89,7 +89,7 @@ public class Login extends Fragment implements View.OnClickListener{
                                 startActivity(new Intent(getActivity(), Recyclerview.class));
                                 getActivity().finish();
                             } else {
-                                Toast.makeText(getActivity(), obj.getString("message"), Toast.LENGTH_LONG).show();
+                                Toast.makeText(BottomTabBar.context, obj.getString("message"), Toast.LENGTH_LONG).show();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -99,7 +99,7 @@ public class Login extends Fragment implements View.OnClickListener{
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getActivity(), error.getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(BottomTabBar.context, error.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }
 
