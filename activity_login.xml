@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:background="@mipmap/bg">
+    android:background="@mipmap/b">
 
     <LinearLayout
         android:id="@+id/LinearLayout"
@@ -54,13 +54,5 @@
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimary"
-        app:itemIconTint="@color/nav_item_state_list"
-        app:itemTextColor="@color/nav_item_state_list"
-        app:menu="@menu/bottom_navigation_items"/>
+
 </RelativeLayout>

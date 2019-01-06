@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BottomTabBar">
+    tools:context=".BottomTabBar"
+    android:background="@mipmap/b">
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/navigation"
-        android:animateLayoutChanges="true">
+        android:animateLayoutChanges="true"
+        >
 
     </FrameLayout>
 
@@ -20,10 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimary"
-        app:menu="@menu/bottom_navigation_items"
         app:itemIconTint="@color/nav_item_state_list"
         app:itemTextColor="@color/nav_item_state_list"
-        />
-
-
+        app:menu="@menu/bottom_navigation_items"/>
 </RelativeLayout>

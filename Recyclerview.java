@@ -1,5 +1,6 @@
 package com.example.abdallaheltahawi.namaaapp;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -39,12 +40,9 @@ public class Recyclerview extends AppCompatActivity {
         recyclerview=(RecyclerView) findViewById(R.id.recyclerView);
         recyclerview.setHasFixedSize(true);
         recyclerview.setLayoutManager(new LinearLayoutManager(this));
+        recyclerview.setAdapter(adapter);
         listitems=new ArrayList<>();
         loadRecylerViewData();
-
-
-        //Used to select an item programmatically
-        //bottomNavigationView.getMenu().getItem(2).setChecked(true);
 
     }
     private void loadRecylerViewData()

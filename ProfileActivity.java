@@ -19,7 +19,7 @@ public class ProfileActivity extends AppCompatActivity {
         if(!SharedPrefManager.getInstance(this).isLoggedIn())
         {
          finish();
-         startActivity(new Intent(this,LoginActivity.class));
+         startActivity(new Intent(this,Register.class));
         }
 
         textViewUsername=(TextView)findViewById(R.id.textViewUsername);
@@ -27,6 +27,8 @@ public class ProfileActivity extends AppCompatActivity {
 
         textViewUsername.setText(SharedPrefManager.getInstance(this).getUsername());
         textViewUserEmail.setText(SharedPrefManager.getInstance(this).getUserEmail());
+
+
     }
 
     @Override
@@ -42,7 +44,7 @@ public class ProfileActivity extends AppCompatActivity {
             case R.id.menuLogout:
                 SharedPrefManager.getInstance(this).logout();
                 finish();
-                startActivity(new Intent(this,LoginActivity.class));
+                startActivity(new Intent(this,Register.class));
             break;
 
             case R.id.menuSettings:
